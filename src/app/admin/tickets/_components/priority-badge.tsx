@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { TicketPriority } from "@generated/prisma";
+import { TicketPriority } from "@prisma/client";
 import React from "react";
 
 type Props = {

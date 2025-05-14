@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/select";
 import React from "react";
 import { useTicketContext } from "../_context/tickets-context";
-import { TicketPriority, TicketStatus } from "@generated/prisma";
+import { TicketPriority, TicketStatus } from "@prisma/client";
 import { useListAllClients } from "@/queries/clients/hooks";
 const Filters = () => {
   const { filters, resetFilters, setFilters } = useTicketContext();

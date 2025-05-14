@@ -11,10 +11,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { formatDate } from "date-fns";
-import { User } from "@generated/prisma";
 import { useState } from "react";
 import { useDeleteEngineer } from "@/queries/engineers/hooks";
 import { AlertTriangle } from "lucide-react";
+import { User } from "@prisma/client";
 
 type EngineerWithCount = User & {
   _count: {
@@ -79,13 +79,13 @@ export default function ViewEngineerDialog({ engineer, children }: Props) {
         </div>        <DialogFooter className="flex items-center justify-between sm:justify-between border-t pt-4">
           <div className="flex items-center text-sm text-muted-foreground">
             <AlertTriangle className="mr-2 h-4 w-4 text-destructive" />
-            {isDeleting ? 
-              "Deleting..." : 
+            {isDeleting ?
+              "Deleting..." :
               "This will unassign tickets and delete any tickets created by this engineer"
             }
           </div>
-          <Button 
-            variant="destructive" 
+          <Button
+            variant="destructive"
             onClick={handleDelete}
             disabled={isDeleting || deleteEngineerMutation.isPending}
           >

@@ -1,4 +1,4 @@
-import { ApprovalStatus } from "@generated/prisma";
+import { ApprovalStatus } from "@prisma/client";
 
 export type OpenTicketByUserType = {
   name: string;

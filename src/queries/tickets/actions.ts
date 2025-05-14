@@ -8,7 +8,7 @@ import {
 } from "./types";
 import { ActionResponse } from "../types";
 import { prisma } from "@/lib/prisma";
-import { TicketPriority, TicketStatus, User } from "@generated/prisma";
+import { TicketPriority, TicketStatus, User } from "@prisma/client";
 import { mail } from "@/lib/mail";
 import { SERVICE_OPTIONS } from "@/constants/service-options";
 

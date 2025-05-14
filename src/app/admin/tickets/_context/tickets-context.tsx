@@ -1,4 +1,4 @@
-import { TicketPriority, TicketStatus } from "@generated/prisma";
+import { TicketPriority, TicketStatus } from "@prisma/client";
 import { createContext, useContext, useState } from "react";
 
 type TicketFilters = {

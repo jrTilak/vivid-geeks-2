@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Ticket, TicketPriority, TicketStatus, User } from "@generated/prisma";
+import { Ticket, TicketPriority, TicketStatus, User } from "@prisma/client";
 import PriorityBadge from "./priority-badge";
 import StatusBadge from "./status-badge";
 import { formatDate } from "date-fns";
